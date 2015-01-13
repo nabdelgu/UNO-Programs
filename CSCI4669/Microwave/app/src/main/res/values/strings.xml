@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Microwave</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="NumberZero">0</string>
+    <string name="NumberOne">1</string>
+    <string name="NumberTwo">2</string>
+    <string name="NumberThree">3</string>
+    <string name="NumberFour">4</string>
+    <string name="NumberFive">5</string>
+    <string name="NumberSix">6</string>
+    <string name="NumberSeven">7</string>
+    <string name="NumberEight">8</string>
+    <string name="NumberNine">9</string>
+
+
+</resources>

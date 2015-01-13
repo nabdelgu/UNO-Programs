@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Recreational Angler Sign up</string>
+    <string name="hello_world">Hello Android!</string>
+    <string name="action_settings">Settings</string>
+
+<string-array name="license_type">
+    <item>normal</item>
+    <item>senior</item>
+    <item>lifetime</item>
+</string-array>
+
+    <string-array name="feedback_type">
+        <item>New Feature Request</item>
+        <item>Defect</item>
+        <item>Comment</item>
+        <item>Praise</item>
+    </string-array>
+
+</resources>

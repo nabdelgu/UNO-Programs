@@ -1,0 +1,67 @@
+package gov.louisiana.wlf.swordfish.model.mainScreen;
+
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
+import com.activeandroid.annotation.Table;
+
+/**
+ * Created by noah on 7/21/14.
+ */
+
+
+    @Table(name = "feedback")
+    public class Feedback extends Model {
+
+        @Column(name = "feedbackType")
+        public String feedbackType;
+
+        @Column(name = "subject")
+        public String subject;
+
+        @Column(name = "description")
+        public String description;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// getter and setter methods
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public Feedback() {
+        super();
+    }
+
+    public String getFeedbackType(){
+        return feedbackType;
+    }
+
+    public void setFeedbackType(String feedbackType){
+        this.feedbackType = feedbackType;
+    }
+
+    public String getSubject() {
+
+        return subject;
+    }
+
+    public void setSubject(String subject){
+        this.subject = subject;
+    }
+
+    public String getDescription(){
+
+        return description;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
+    }
+
+}
+
+
+
+
+
+

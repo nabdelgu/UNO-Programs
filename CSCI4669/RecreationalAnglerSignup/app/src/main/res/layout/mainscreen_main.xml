@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="78dp"
+        android:background="#258514"
+
+        android:measureAllChildren="false"
+        android:layout_alignParentTop="true"
+
+        android:id="@+id/frameLayout"
+        android:layout_alignRight="@+id/editLoginUsername"
+        android:layout_weight="0.02">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Recreational Offshort Landing Permit"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal|bottom"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="59dp"
+            android:id="@+id/imageWildlifeFisheries"
+            android:src="@drawable/la_sa_logo_290"
+            android:layout_gravity="center_horizontal|top" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.02">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:id="@+id/buttonLayout"
+            android:layout_alignParentTop="true">
+
+            <ImageButton
+                android:layout_width="372dp"
+                android:layout_height="81dp"
+                android:id="@+id/imageRecreationalAngler"
+                android:layout_gravity="center_horizontal|bottom"
+                android:src="@drawable/recreation"
+                android:background="#ffffff" />
+
+            <ImageButton
+                android:layout_width="357dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageCharterCaptain"
+                android:layout_gravity="center_horizontal|top"
+                android:src="@drawable/charter"
+                android:background="#ffffff" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/buttonLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#c7c5c7">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="137dp"
+                android:layout_gravity="center_horizontal|bottom">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:text="Feedback"
+                    android:id="@+id/buttonFeedback"
+                    android:layout_gravity="center_horizontal|top"
+                    android:background="#ffff00" />
+            </FrameLayout>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

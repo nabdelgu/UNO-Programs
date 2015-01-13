@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gov.louisiana.wlf.swordfish.model" >
+
+    <application
+        android:name="gov.louisiana.wlf.swordfish.model.MainApplication"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="Recreational Offshore Landing Permit"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="gov.louisiana.wlf.swordfish.model."
+            android:label="Recreational Offshore Landing Permit" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mainScreen.FeedbackApplication"> </activity>
+
+        <activity
+            android:name="gov.louisiana.wlf.swordfish.model.FishermanRegistrationActivity"
+            android:label="Recreational Offshore Landing Permit" >
+        </activity>
+
+        <meta-data android:name="AA_DB_NAME" android:value="anglerInfo.db" />
+        <meta-data android:name="AA_DB_VERSION" android:value="2" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,563 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingTop="1dp"
+    android:paddingBottom="0dp"
+    tools:context="gov.louisiana.wlf.swordfish.MainActivity"
+    android:background="#fcfffd"
+    android:clickable="false"
+    android:layoutMode="opticalBounds">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="561dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="License Type:"
+                    android:id="@+id/textLicenseType"
+                    android:textStyle="bold"
+                    android:layout_marginTop="102dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*Login Username:"
+                    android:id="@+id/textLoginUsername"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textLicenseType"
+                    android:layout_alignLeft="@+id/textLicenseType"
+                    android:layout_alignStart="@+id/textLicenseType" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*Password:"
+                    android:id="@+id/textPassword"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textLoginUsername"
+                    android:layout_alignLeft="@+id/textLoginUsername"
+                    android:layout_alignStart="@+id/textLoginUsername" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*Confirm password:"
+                    android:id="@+id/textConformPassword"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textPassword"
+                    android:layout_alignLeft="@+id/textPassword"
+                    android:layout_alignStart="@+id/textPassword" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Email:"
+                    android:id="@+id/textEmail"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textConformPassword"
+                    android:layout_alignLeft="@+id/textConformPassword"
+                    android:layout_alignStart="@+id/textConformPassword" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*First name:"
+                    android:id="@+id/textName"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textEmail"
+                    android:layout_alignLeft="@+id/textEmail"
+                    android:layout_alignStart="@+id/textEmail" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*Last Name:"
+                    android:id="@+id/textLastName"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/editName"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*Street Address: "
+                    android:id="@+id/textStreetAdress"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textLastName"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Street Address line 2:"
+                    android:id="@+id/textStreetAddressLine2"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textStreetAdress"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*City: "
+                    android:id="@+id/textCity"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/editStreetAddressLine2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*State: "
+                    android:id="@+id/textState"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textCity"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*Zip: "
+                    android:id="@+id/textZip"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/editState"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*Phone Number:"
+                    android:id="@+id/textPhoneNumber"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textZip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*Confirm Fishing License Number: "
+                    android:id="@+id/textLicenseNumber"
+                    android:textColor="#000003"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textFishingLicense"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/editStreetAddressLine2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="*LDWF Charter Boat Fishing License: "
+                    android:id="@+id/textFishingLicense"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textPhoneNumber"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignRight="@+id/buttonSubmitApplication"
+                    android:layout_alignEnd="@+id/buttonSubmitApplication" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editLoginUsername"
+                    android:layout_alignBottom="@+id/textLoginUsername"
+                    android:layout_toRightOf="@+id/textLoginUsername"
+                    android:width="@android:dimen/thumbnail_width"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/editEmail"
+                    android:layout_above="@+id/textName"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/textEmail" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editName"
+                    android:layout_alignBottom="@+id/textName"
+                    android:layout_toRightOf="@+id/textName"
+                    android:layout_alignRight="@+id/editLoginUsername" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editCity"
+                    android:layout_above="@+id/textState"
+                    android:layout_toRightOf="@+id/textCity"
+                    android:layout_alignRight="@+id/editName"
+                    android:layout_alignEnd="@+id/editName" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editState"
+                    android:layout_alignBottom="@+id/textState"
+                    android:layout_alignRight="@+id/editZip"
+                    android:layout_alignEnd="@+id/editZip"
+                    android:layout_toRightOf="@+id/textStateValidation" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:maxLength="5"
+                    android:id="@+id/editZip"
+                    android:layout_above="@+id/textPhoneNumber"
+                    android:layout_toRightOf="@+id/textZip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editPhoneNumber"
+                    android:maxLength="10"
+                    android:layout_alignBottom="@+id/textPhoneNumber"
+                    android:layout_toRightOf="@+id/textPhoneNumber"
+                    android:layout_alignRight="@+id/editZip"
+                    android:layout_alignEnd="@+id/editPhoneNumber" />
+
+                <EditText
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:maxLength="10"
+                    android:id="@+id/editSaltwaterFishingLicense"
+                    android:layout_alignBottom="@+id/textFishingLicense"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/textStreetAdress" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editStreetAddressLine2"
+                    android:layout_alignBottom="@+id/textStreetAddressLine2"
+                    android:layout_alignRight="@+id/editName"
+                    android:layout_alignEnd="@+id/editName"
+                    android:layout_toRightOf="@+id/textStreetAddressLine2" />
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/spinner"
+                    android:spinnerMode="dropdown"
+                    android:layout_above="@+id/textLoginUsername"
+                    android:layout_toRightOf="@+id/textLicenseType" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editStreetAddress"
+                    android:layout_alignLeft="@+id/editPhoneNumber"
+                    android:layout_alignStart="@+id/editPhoneNumber"
+                    android:layout_above="@+id/textStreetAddressLine2"
+                    android:layout_alignRight="@+id/editName"
+                    android:layout_alignEnd="@+id/editName" />
+
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="260dp"
+                    android:background="#258514"
+
+                    android:measureAllChildren="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_above="@+id/spinner"
+                    android:id="@+id/frameLayout"
+                    android:layout_alignRight="@+id/editLoginUsername">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Recreational Offshort Landing Permit"
+                        android:id="@+id/textView"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:textColor="#ffffff" />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="59dp"
+                        android:id="@+id/imageWildlifeFisheries"
+                        android:src="@drawable/la_sa_logo_290"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignLeft="@+id/editConfirmPassword"
+                        android:layout_alignStart="@+id/editConfirmPassword"
+                        android:layout_gravity="center_horizontal|top" />
+
+                </FrameLayout>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:maxLength="10"
+                    android:id="@+id/editConfirmLicense"
+                    android:layout_alignBottom="@+id/textLicenseNumber"
+                    android:layout_alignLeft="@+id/editLoginUsername"
+                    android:layout_alignStart="@+id/editLoginUsername"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:layout_alignBottom="@+id/textLastName"
+                    android:layout_toRightOf="@+id/textName"
+                    android:layout_alignRight="@+id/editZip"
+                    android:layout_alignEnd="@+id/editZip" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="Submit Application"
+                    android:id="@+id/buttonSubmitApplication"
+                    android:layout_below="@+id/editConfirmLicense"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="showMessage"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textInvalidPassword"
+                    android:layout_below="@+id/textLoginUsername"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_above="@+id/textConformPassword"
+                    android:textColor="#ff0e0a" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="* Required Fields"
+                    android:id="@+id/textView2"
+                    android:layout_below="@+id/frameLayout"
+                    android:layout_alignRight="@+id/editConfirmLicense"
+                    android:layout_alignEnd="@+id/editConfirmLicense" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/editPasswordField"
+                    android:layout_above="@+id/textConformPassword"
+                    android:layout_toRightOf="@+id/textPassword"
+                    android:layout_alignRight="@+id/editEmail"
+                    android:layout_alignEnd="@+id/editEmail" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/editFieldConfirmPassword"
+                    android:layout_below="@+id/editLoginUsername"
+                    android:layout_toRightOf="@+id/textConformPassword"
+                    android:layout_alignBottom="@+id/textConformPassword"
+                    android:layout_alignRight="@+id/textInvalidPassword"
+                    android:layout_alignEnd="@+id/textInvalidPassword" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textZipValidate"
+                    android:layout_below="@+id/editState"
+                    android:layout_alignRight="@+id/editCity"
+                    android:layout_alignEnd="@+id/editCity" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textLDWFValidate"
+                    android:layout_alignTop="@+id/editSaltwaterFishingLicense"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/textFishingLicense"
+                    android:layout_alignBottom="@+id/textFishingLicense" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textConfirmPasswordText"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/textFishingLicense"
+                    android:layout_below="@+id/editLoginUsername"
+                    android:layout_alignBottom="@+id/editPasswordField" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textLoginUsernameValidation"
+                    android:layout_alignRight="@+id/textInvalidPassword"
+                    android:layout_alignEnd="@+id/textInvalidPassword"
+                    android:layout_alignBottom="@+id/editLoginUsername"
+                    android:layout_alignLeft="@+id/textConfirmPasswordText"
+                    android:layout_alignStart="@+id/textConfirmPasswordText"
+                    android:layout_below="@+id/spinner" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textFirstNameValidation"
+                    android:layout_below="@+id/editEmail"
+                    android:layout_alignRight="@+id/textInvalidPassword"
+                    android:layout_alignEnd="@+id/textInvalidPassword" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textLastNameValidation"
+                    android:layout_below="@+id/editName"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textCityValidation"
+                    android:layout_below="@+id/editStreetAddressLine2"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textZipValidation"
+                    android:layout_below="@+id/editState"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textPhoneNumberValidation"
+                    android:layout_below="@+id/editZip"
+                    android:layout_toLeftOf="@+id/textZipValidate" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textStateValidation"
+                    android:layout_alignBottom="@+id/editState"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignLeft="@+id/textLDWFValidate"
+                    android:layout_alignStart="@+id/textLDWFValidate"
+                    android:layout_below="@+id/editCity" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textStreetAddress"
+                    android:layout_below="@+id/editText"
+                    android:layout_alignRight="@+id/textLastNameValidation"
+                    android:layout_alignEnd="@+id/textLastNameValidation" />
+
+                <AutoCompleteTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/autoCompleteTextViewState"
+                    android:layout_alignBottom="@+id/textState"
+                    android:layout_alignRight="@+id/editState"
+                    android:layout_alignEnd="@+id/editState"
+                    android:layout_toRightOf="@+id/textState" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
