@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="text-center center" id="logo" style="top: 20px;position: relative;">
+    <%= image_tag('ecommerce.png', :size => '200x100') %>
+  </div>
+  <h1>Your Cart</h1>
+  <div class="col-md-8">
+  <%= button_to cart_clear_path,method: :get, class: "btn btn-danger" do %>
+      <i class="glyphicon glyphicon-trash"> Clear Cart</i>
+  <% end %>
+
+  <% total = 0 %>
+  <% shipping = 0 %>
+  <% tax = 0 %>
+
+  <table class="table table-strpied table-hover" >
+    <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @cart.each do |id, quantity| %>
+        <% product = Product.find_by_id(id) %>
+
+        <tr>
+          <td><p><%= link_to product.name, product %></p></td>
+          <td id="price"><p><%= product.price %></p></td>
+          <td><p><%= quantity %></p></td>
+        </tr>
+        <% total += quantity * product.price.to_i %>
+        <% tax = total * 0.1 %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+  <div class="col-md-4" id="purchase_summary">
+    <p><b>Purchase Summary</b></p>
+
+    <p><b>Subtotal: </b>$<%= total %></p>
+    <% if total == 0 %>
+        <% shipping = 0 %>
+        <p><b>Shipping: </b>FREE </p>
+    <% end  %>
+    <% if total > 50 %>
+        <% shipping = 0 %>
+        <p><b>Shipping: </b>FREE </p>
+    <% else %>
+        <% shipping = 5 %>
+        <p><b>Shipping: 5</b>$ </p>
+    <% end %>
+    <p><b>Est. tax: </b>$<%= tax %></p>
+
+    <p><b>Est. total: </b>$<%= tax + total + shipping %></p>
+    <% if total > 0 %>
+        <% shipping = 0 %>
+        <p><b>Shipping: </b>FREE </p>
+        <%= button_to 'Checkout', checkouts_new_path ,method: :get, :class=>'btn btn-success'  %>
+    <% end %>
+
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+<div class = "products container">
+
+
+
+    <table class = "table">
+      <%= image_tag @product.image.url(:thumb) %>
+
+        <p>
+          <strong>Name:</strong>
+          <%= @product.name %>
+        </p>
+
+        <p>
+          <strong>Price:</strong>
+          <%= @product.price %>
+        </p>
+    </table>
+    <% if is_admin? %>
+      
+        <%= link_to 'Edit', edit_product_path(@product) %> |
+    <% end %>
+    <%= link_to 'Back', products_path %>
+</div>

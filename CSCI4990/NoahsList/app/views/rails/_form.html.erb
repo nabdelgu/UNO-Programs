@@ -1,0 +1,45 @@
+<%= form_for(@rail) do |f| %>
+  <% if @rail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rail.errors.count, "error") %> prohibited this rail from being saved:</h2>
+
+      <ul>
+      <% @rail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :generate %><br>
+    <%= f.text_field :generate %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :User %><br>
+    <%= f.text_field :User %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :encrypted_password %><br>
+    <%= f.text_field :encrypted_password %>
+  </div>
+  <div class="field">
+    <%= f.label :salt %><br>
+    <%= f.text_field :salt %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

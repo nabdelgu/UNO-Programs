@@ -1,0 +1,24 @@
+<div class="container">
+<p>
+  <strong>Address:</strong>
+  <%= @checkout.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @checkout.city %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @checkout.zip %>
+</p>
+
+<p>
+  <strong>Card number:</strong>
+  <%= @checkout.card_number %>
+</p>
+
+<%= link_to 'Edit', edit_checkout_path(@checkout) %> |
+<%= link_to 'Back', checkouts_path %>
+</div>

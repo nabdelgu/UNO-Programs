@@ -1,0 +1,39 @@
+<h1>User<%= @user.id %></h1>
+
+<p>
+  <strong>Generate:</strong>
+  <%= @rail.generate %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @rail.model %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rail.User %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rail.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @rail.email %>
+</p>
+
+<p>
+  <strong>Encrypted password:</strong>
+  <%= @rail.encrypted_password %>
+</p>
+
+<p>
+  <strong>Salt:</strong>
+  <%= @rail.salt %>
+</p>
+
+<%= link_to 'Edit', edit_rail_path(@rail) %> |
+<%= link_to 'Back', rails_path %>

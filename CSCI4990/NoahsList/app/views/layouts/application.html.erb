@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+
+  <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' %>
+  <%= stylesheet_link_tag '//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css' %>
+  <%= javascript_include_tag 'https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js' %>
+  <%= javascript_include_tag '//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js' %>
+  <%= csrf_meta_tags %>
+  <script>
+      <% if !:notice.nil? %>
+      setTimeout(function () {
+          $('#notice').remove();
+      }, 3000);
+      <% end %>
+
+      <% if !:error.nil? %>
+      setTimeout(function () {
+          $('#error').remove();
+      }, 3000);
+      <% end %>
+  </script>
+  <style>
+      .container {
+          top: 50px;
+          position: relative;
+      }
+
+      .form-group {
+          width: 25%;
+      }
+  </style>
+</head>
+<body>
+<%= render "layouts/header" %>
+<% if !notice.nil? %>
+    <div class="alert alert-success" style="position: relative;top: 260px;width: 25%;margin: auto;" id="notice">
+      <p><%= notice %></p>
+    </div>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

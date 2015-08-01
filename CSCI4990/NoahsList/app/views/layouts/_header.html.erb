@@ -1,0 +1,61 @@
+<header class = "navbar navbar-fixed-top navbar-inverse" >
+  <div class="container" style="position: initial;">
+    <nav>
+
+      <% if logged_in? %>
+
+          <ul class ="nav navbar-nav navbar-left" id = "login">
+            <%= link_to cart_path, class: "btn btn-default" do %>
+                <i class="glyphicon glyphicon-shopping-cart">Cart</i>
+            <% end %>
+          </ul>
+
+          <ul class ="nav navbar-nav navbar-left" id = "login">
+            <%= link_to view_products_path, class: "btn btn-default" do %>
+                <i>Products</i>
+            <% end %>
+          </ul>
+
+          <ul class ="nav navbar-nav navbar-right" id = "login" >
+            <%= link_to logout_path, class: "btn btn-default" do %>
+                <i class="glyphicon glyphicon-log-out">Logout</i>
+            <% end %>
+          </ul>
+
+
+      <% else %>
+          <ul class ="nav navbar-nav navbar-left" id = "login">
+             <%= link_to login_path, class: "btn btn-default" do %>
+                <i class="glyphicon glyphicon-shopping-cart">Cart</i>
+             <% end %>
+          </ul>
+
+          <ul class ="nav navbar-nav navbar-left" id = "login">
+            <%= link_to view_products_path, class: "btn btn-default" do %>
+                <i>Products</i>
+            <% end %>
+          </ul>
+
+          <ul class ="nav navbar-nav navbar-right" id = "login" >
+            <%= link_to login_path, class: "btn btn-default" do %>
+                <i class="glyphicon glyphicon-log-in">Login</i>
+            <% end %>
+          </ul>
+
+          <ul class ="nav navbar-nav navbar-right" id = "login" >
+            <%= link_to signup_path, class: "btn btn-default" do %>
+                <i>Signup</i>
+            <% end %>
+          </ul>
+
+      <% end %>
+      <ul class ="nav navbar-nav navbar-right" style="margin-right: 400px" id = "logo_font">
+        <a class="navbar-brand text-center" href="<%= root_path %>">NoahsList</a>
+      </ul>
+    </nav>
+
+
+
+
+  </div>
+</header>

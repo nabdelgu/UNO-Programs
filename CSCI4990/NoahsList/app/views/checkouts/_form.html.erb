@@ -1,0 +1,38 @@
+<div class = "container">
+  <div class = "text-center center" id = "appearance" style="margin-left: 0%">
+    <br>
+    <%= image_tag('ecommerce.png', :size => '200x100') %>
+  </div>
+  <h1 class = "text-center">Checkout</h1>
+  <%= form_for(@checkout) do |f| %>
+      <% if @checkout.errors.any? %>
+          <h2>Errors:</h2>
+          <ul>
+            <% @checkout.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+   <% end  %>
+
+    <div class="col-xs-5 col-xs-offset-4" style="right-width: 70px">
+      <%= f.label :address %>
+      <%= f.text_field :address, :placeholder => "address",class: 'form-control' %>
+    </div>
+
+    <div class="col-xs-5 col-xs-offset-4">
+      <%= f.label :city %>
+      <%= f.text_field :city, :placeholder => "city",class: 'form-control' %>
+    </div>
+
+    <div class="col-xs-5 col-xs-offset-4">
+      <%= f.label :zip %>
+      <%= f.text_field :zip, :placeholder => "zip",class: 'form-control' %>
+    </div>
+
+    <div class="col-xs-5 col-xs-offset-4 text-center">
+      <br>
+      <%= f.submit "Place Order", class: "btn btn-primary"%>
+    </div>
+    <% end %>
+</div>
+

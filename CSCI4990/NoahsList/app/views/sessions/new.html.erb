@@ -1,0 +1,37 @@
+<div class="container" style="text-align: center;">
+  <%= provide(:title, "Log in") %>
+  <div class="text-center center" id="appearance" style="margin-left: 0%">
+    <br>
+    <%= image_tag('ecommerce.png', :size => '200x100') %>
+  </div>
+  <h1>Log in</h1>
+  <br/>
+
+  <div style="text-align: center;left: 38%;position: relative;">
+    <div>
+      <%= form_for(:session, url: login_path) do |f| %>
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.submit "Log in", class: "btn btn-primary" %>
+          </div>
+      <% end %>
+
+      <div class="form-group">
+        <% if !:error.nil? %>
+            <div class="alert alert-danger" id="error">
+              <p><%= flash[:error] %></p>
+            </div>
+        <% end %>
+        <p>New user?<%= button_to " Sign up now", signup_path, method: :get, :class => 'btn btn-default' %></p>
+      </div>
+    </div>
+  </div>
+</div>
